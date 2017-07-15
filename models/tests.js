@@ -16,10 +16,7 @@ var User = function () {
             type: Sequelize.STRING
         }
     }
-    // console.log(Sequelize)
-    // console.log(Sequelize)
-
-    return  Sequelize.mod('test1e',sql)
+    return  Sequelize.mod('tests',sql)
 }
 
 

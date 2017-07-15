@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+123
+<script>
+    function aa(_a) {
+
+    }
+    var p = new Proxy(aa , {
+        apply: function(target, thisArg, argumentsList) {
+                target(argumentsList[0],argumentsList[1],argumentsList[2])
+        }
+    });
+    p(1,2)
+//    console.log(p(1, 2, 3)); // "called:, 2, 3"
+
+</script>
+</body>
+</html>

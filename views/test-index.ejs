@@ -5,6 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-hahah
+
+123
+<script>
+    var p = new Proxy(function() {}, {
+        construct: function(target, argumentsList, newTarget) {
+            console.log('called: ' + argumentsList.join(', '));
+            return { value: argumentsList[0] * 10 };
+        }
+    });
+
+    console.log(new p(1).value); // "called: 1"
+    console.log(123)
+</script>
 </body>
 </html>

@@ -12,7 +12,7 @@ var sequelize = new Sequelize('database', 'username', 'password', {
     },
 
     // SQLite only
-    storage: './db/test123.db'
+    storage: './db/test.db'
 });
 sequelize
     .authenticate()
@@ -42,12 +42,12 @@ var  appmodels=function () {
             //     }
             // }
         )
-        modelname.sync({force: false}).then(function () {
+        modelname.sync({force: true}).then(function () {
             // 已创建数据表
-            modelname.create({
-                firstName: 'squid',
-                // lastName: 'Hancock'
-            });
+            // modelname.create({
+            //     // firstName: 'squid',
+            //     // lastName: 'Hancock'
+            // });
 
             // User.findAll().then(function (data) {
             //     // console.log(data)
