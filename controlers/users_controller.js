@@ -8,6 +8,7 @@ module.exports = function (router, models) {
 
   var actions = {
     index: function (req, res, next) {
+      // models.users.create( {firstName: 'John'})
       models.users.findAll().then(function (data) {
         res.json(data)
       })
